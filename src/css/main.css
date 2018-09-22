@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: url(../img/background.jpg) #1b232b no-repeat top center;
+	background-size: cover;
+}
+
+.size_s {
+	font-size: 20px;
+}
+
+#main_body {
+	max-width: 985px;
+	margin: 70px auto;
+}
+
+.select_block {
+	border: 1px solid rgba(146, 232, 254, 0.2);
+	border-radius: 10px;
+	margin-bottom: 55px;
+}
+
+.select_block .select_1 {
+	width: 60%;
+	text-align: center;
+	padding: 30px;
+	display: inline-block;
+	box-sizing: content-box;
+}
+
+.select_block .select_1 span {
+	color: white;
+	font-size: 32px;
+	font-weight: 500;
+}
+
+.select_block .select_2 {
+	display: inline-block;
+	width: 33%;
+}
+
+.block_coin {
+	padding: 20px 30px;
+	color: white;
+	font-weight: 500;
+	margin-right: 25px;
+	width: 307px;
+	box-sizing: border-box;
+	background: no-repeat;
+	display: inline-block;
+}
+
+.block_coin:last-child {
+	margin-right: 0;
+}
+
+.block_coin .title {
+	font-size: 22px;
+	text-align: center;
+}
+
+.block_coin .content {
+	padding-top: 140px;
+}
+
+.block_coin .content .info_block {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.block_coin .price_block {
+	margin-bottom: 15px;
+}
+
+.block_coin .trigger_block {
+	margin-bottom: 10px;
+}
+
+.block_coin .content .content_left {
+	display: inline-block;
+	width: 49%;
+	margin-bottom: 2px;
+}
+
+.block_coin .content .content_right {
+	display: inline-block;
+	width: 49%;
+	text-align: right;
+}
+
+.block_coin .content .value {
+	color: #70c446;
+	font-size: 16px;
+}
+
+.block_coin .content .red {
+	color: red;
+}
+
+.dropdown-content:before {
+	margin-top: 20px
+}
+
+.dropbtn {
+	background-color: #1f272f;
+	border: 1px solid #92e8fe;
+	color: white;
+	padding: 15px 30px;
+	font-size: 16px;
+	width: 95%;
+	font-weight: 100;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: left;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	width: 95%;
+}
+
+.dropbtn:after {
+	content: '\2228';
+	color: #92e8fe;
+	float: right;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	right: 5%;
+	width: 95%;
+	background-color: #1f272f;
+	border: 1px solid #92e8fe;
+	border-radius: 5px;
+	color: white;
+	/* padding: 0px 25px; */
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: white;
+	padding: 15px 30px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #3a7c8c;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	/* margin-top: 0px; */
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #3a7c8c;
+}
+
+.ethereum {
+	background-image: url('../img/ethereum.png');
+}
+
+.litecoin {
+	background-image: url('../img/litecoin.png');
+}
+
+.bitcoin {
+	background-image: url('../img/bitcoin.png');
+}
+
+#check_eth, #check_ltc, #check_btc {
+	display: none;
+}
+
+[for="check_eth"], [for="check_ltc"], [for="check_btc"] {
+	position: relative;
+	display: inline-block;
+	width: 25px;
+	padding: 8px;
+	border-radius: 50px;
+	background: #c4c4c4;
+	cursor: pointer;
+}
+
+[for="check_eth"]:after, [for="check_ltc"]:after, [for="check_btc"]:after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: -3px;
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url("../img/radio.png") no-repeat;
+	transition: .5s;
+}
+
+#check_eth:checked~[for="check_eth"]:after, #check_ltc:checked~[for="check_ltc"]:after, #check_btc:checked~[for="check_btc"]:after {
+	left: 20px;
+}
+
+#check_eth:checked~[for="check_eth"], #check_ltc:checked~[for="check_ltc"], #check_btc:checked~[for="check_btc"] {
+	background-color: #3eb3ef;
+}
